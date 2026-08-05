@@ -1,230 +1,191 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asesoría y Gestión de Visas | EE. UU. y Canadá</title>
-    <!-- Tailwind CSS vía CDN para un desarrollo rápido sin instalaciones -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome para iconos (WhatsApp, Check, etc.) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestoría de Visas Americanas - Lic. Guadalupe Ávila Camacho</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuentes Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .font-serif-italic {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="bg-slate-900 text-slate-800 antialiased min-h-screen">
 
-    <!-- Navegación -->
-    <header class="sticky top-0 bg-white shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-xl font-bold text-blue-900 flex items-center gap-2">
-                <i class="fa-solid fa-passport text-blue-600"></i>
-                <span>Gestoría de Visas</span>
-            </div>
-            <!-- Reemplaza EL_NUMERO con el número a 10 dígitos de tu mamá -->
-            <a href="https://wa.me/5215621794717?text=Hola,%20busco%20informaci%C3%B3n%20para%20tramitar%20mi%20visa" 
-               target="_blank" 
-               class="bg-green-600 hover:bg-green-700 text-white font-medium px-4 py-2 rounded-lg transition flex items-center gap-2 text-sm md:text-base">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
-                <span>Contactar</span>
-            </a>
-        </div>
-    </header>
-
-    <!-- Hero Section (Estilo Flyer) -->
-    <section class="bg-white text-gray-900 py-12 md:py-20 px-4 border-b border-gray-100">
-        <div class="max-w-4xl mx-auto text-center">
-            
-            <!-- Título Principal con estilo del flyer -->
-            <h1 class="text-4xl md:text-6xl font-black text-blue-950 uppercase tracking-tight leading-none mb-1">
-                GESTORÍA <span class="text-red-600">DE VISAS</span>
+  <!-- SECCIÓN PRINCIPAL HERO -->
+  <section class="relative w-full bg-cover bg-center lg:bg-right bg-no-repeat min-h-screen flex items-center py-8 overflow-hidden"
+           style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 40%, rgba(255, 255, 255, 0) 70%), url('Imagenes/Fondo3.PNG');">
+    
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+        
+        <!-- COLUMNA IZQUIERDA: Contenido Principal y Servicios -->
+        <div class="lg:col-span-7 space-y-5">
+          
+          <!-- Encabezado Principal -->
+          <div>
+            <h1 class="uppercase leading-none tracking-tight">
+              <span class="block text-4xl sm:text-5xl lg:text-6xl font-black text-blue-900">GESTORÍA</span>
+              <span class="block text-5xl sm:text-6xl lg:text-7xl font-black text-[#D32F2F] my-1 drop-shadow-sm">DE VISAS</span>
+              <span class="block text-4xl sm:text-5xl lg:text-6xl font-black text-blue-900">Americanas</span>
             </h1>
-            
-            <!-- Subtítulo en estilo elegante -->
-            <h2 class="text-3xl md:text-5xl font-serif italic text-blue-900 mb-6">
-                Americanas
-            </h2>
 
-            <!-- Frase clave del flyer -->
-            <p class="text-base md:text-xl text-gray-700 max-w-2xl mx-auto mb-8 font-medium">
-                Te acompaño desde el inicio del trámite hasta que tengas <span class="text-blue-950 font-bold">tu visa en tus manos</span>.
+            <!-- Estrellas decorativas -->
+            <div class="flex items-center gap-2 my-2 text-xl">
+              <span class="text-[#D32F2F]">★</span>
+              <span class="text-[#0A2540]">★</span>
+              <span class="text-[#D32F2F]">★</span>
+            </div>
+
+            <!-- Subtítulo -->
+            <p class="text-base sm:text-lg text-slate-800 font-semibold leading-relaxed max-w-xl">
+              Te acompaño desde el inicio del trámite hasta que tengas 
+              <span class="text-blue-900 font-extrabold">tu visa en tus manos.</span>
             </p>
+          </div>
 
-            <!-- Botones de Acción -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/5215621794717?text=Hola%20Lic.%20Guadalupe%2C%20busco%20asesor%C3%ADa%20para%20mi%20visa" 
-                   target="_blank" 
-                   class="bg-blue-900 hover:bg-blue-950 text-white font-bold px-8 py-3.5 rounded-lg shadow-md transition flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-clipboard-check text-xl"></i>
-                    Nuestros Servicios
-                </a>
-                <a href="https://wa.me/5215621794717?text=Hola%20Lic.%20Guadalupe%2C%20quiero%20consultar%20por%20WhatsApp" 
-                   target="_blank" 
-                   class="bg-green-600 hover:bg-green-700 text-white font-bold px-8 py-3.5 rounded-lg shadow-md transition flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-xl"></i>
-                    Consulta por WhatsApp
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Sección de Servicios -->
-    <!-- Sección de Servicios (Estilo Flyer) -->
-    <section id="servicios" class="py-16 px-4 bg-gray-50 border-b border-gray-200">
-        <div class="max-w-4xl mx-auto">
+          <!-- BLOQUE DE SERVICIOS TRANSPARENTE -->
+          <div class="bg-transparent p-6 space-y-5 max-w-2xl">
             
-            <!-- Encabezado de la sección -->
-            <div class="text-center mb-10">
-                <span class="inline-flex items-center gap-2 bg-blue-900 text-white font-bold px-4 py-2 rounded-full text-sm uppercase tracking-wide shadow-sm">
-                    <i class="fa-solid fa-list-check"></i>
-                    NUESTROS SERVICIOS
-                </span>
+            <!-- Encabezado con ícono circular integrado -->
+            <div class="inline-flex items-center bg-blue-900 text-white rounded-full pr-5 pl-1.5 py-1 shadow-md gap-3">
+              <div class="w-8 h-8 rounded-full border-2 border-white/30 flex items-center justify-center bg-blue-900 shrink-0">
+                <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                </svg>
+              </div>
+              <span class="font-extrabold tracking-wider uppercase text-sm sm:text-base">NUESTROS SERVICIOS</span>
             </div>
 
-            <div class="space-y-6">
-
-                <!-- Servicio 1: Solicitud de Visa -->
-                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 flex flex-col md:flex-row items-start gap-6">
-                    <div class="w-14 h-14 bg-blue-100 text-blue-900 rounded-xl flex items-center justify-center text-2xl shrink-0">
-                        <i class="fa-solid fa-file-lines"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-xl md:text-2xl font-extrabold text-blue-950 mb-3">
-                            1. SOLICITUD DE VISA
-                        </h3>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-gray-700 font-medium text-base">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-800 text-sm"></i> Formulario DS-160</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-800 text-sm"></i> Programación de citas</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-800 text-sm"></i> Simulacro de entrevista</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-blue-800 text-sm"></i> Preparación de documentos</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Servicio 2: Adelanto de Cita -->
-                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 flex flex-col md:flex-row items-start gap-6">
-                    <div class="w-14 h-14 bg-blue-100 text-blue-900 rounded-xl flex items-center justify-center text-2xl shrink-0">
-                        <i class="fa-solid fa-calendar-days"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-extrabold text-blue-950 mb-2">
-                            2. ADELANTO DE CITA
-                        </h3>
-                        <p class="text-gray-700 font-medium text-base leading-relaxed">
-                            Te ayudo a gestionar una fecha de entrevista más cercana, cuando existe disponibilidad.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Bloque Destacado: Asesoría Personalizada -->
-                <div class="bg-blue-950 text-white p-6 md:p-8 rounded-2xl shadow-lg flex flex-col md:flex-row items-start gap-6">
-                    <div class="w-14 h-14 bg-blue-800 text-white rounded-xl flex items-center justify-center text-2xl shrink-0">
-                        <i class="fa-solid fa-user-check"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl md:text-2xl font-bold mb-2">
-                            Asesoría personalizada de principio a fin
-                        </h3>
-                        <p class="text-blue-100 font-normal text-base leading-relaxed">
-                            Te acompaño durante todo tu proceso, resuelvo tus dudas y estoy contigo en cada paso.
-                        </p>
-                    </div>
-                </div>
-
+            <!-- Servicio 1: Con lista de viñetas -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
+                <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24">
+                  <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-base sm:text-lg font-black text-blue-900 tracking-tight">1. SOLICITUD DE VISA</h3>
+                <ul class="text-xs sm:text-sm text-slate-800 font-semibold space-y-1 mt-1 list-disc list-inside">
+                  <li>Formulario DS-160</li>
+                  <li>Programación de citas</li>
+                  <li>Simulacro de entrevista</li>
+                  <li>Preparación de documentos</li>
+                </ul>
+              </div>
             </div>
 
-        </div>
-    </section>
+            <hr class="border-slate-300/60 border-dashed">
 
-    <!-- Por qué elegirnos -->
-    <section class="bg-blue-50 py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-10">¿Por qué realizar tu trámite con nosotros?</h2>
-            
-            <div class="space-y-6">
-                <div class="bg-white p-4 rounded-lg shadow-sm flex items-start gap-4">
-                    <div class="text-blue-600 text-xl mt-1"><i class="fa-solid fa-shield-halved"></i></div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Cero errores evitables</h4>
-                        <p class="text-gray-600 text-sm">Muchos rechazos se deben a inconsistencias simples en el formulario inicial. Nos aseguramos de presentar un expediente correcto y veraz.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-4 rounded-lg shadow-sm flex items-start gap-4">
-                    <div class="text-blue-600 text-xl mt-1"><i class="fa-solid fa-user-check"></i></div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Acompañamiento cercano</h4>
-                        <p class="text-gray-600 text-sm">Te guiamos sobre qué documentos de soporte llevar y cómo desenvolverte con seguridad en la entrevista.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-4 rounded-lg shadow-sm flex items-start gap-4">
-                    <div class="text-blue-600 text-xl mt-1"><i class="fa-solid fa-handshake"></i></div>
-                    <div>
-                        <h4 class="font-bold text-gray-900">Ética y Transparencia</h4>
-                        <p class="text-gray-600 text-sm">Trabajamos bajo los lineamientos oficiales. No prometemos garantías falsas, trabajamos con absoluta honestidad.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Contacto y Firma (Estilo Flyer) -->
-    <section class="bg-blue-950 text-white py-12 px-4">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 border-b border-blue-800 pb-10">
-            
-            <!-- Botón / Datos de Contacto -->
-            <div class="flex items-center gap-4 text-left">
-                <a href="https://wa.me/5215621794717?text=Hola%20Lic.%20Guadalupe%2C%20busco%20asesor%C3%ADa%20para%20mi%20visa" 
-                   target="_blank" 
-                   class="w-14 h-14 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center text-2xl shadow-lg transition shrink-0">
-                    <i class="fa-solid fa-phone"></i>
-                </a>
-                <div>
-                    <span class="text-xs uppercase tracking-widest text-blue-300 font-semibold block">CONTÁCTAME</span>
-                    <a href="https://wa.me/5215621794717?text=Hola%20Lic.%20Guadalupe%2C%20busco%20asesor%C3%ADa%20para%20mi%20visa" 
-                       target="_blank" 
-                       class="text-2xl md:text-3xl font-extrabold text-white hover:text-red-400 transition">
-                        +52 56 2179 4717
-                    </a>
-                </div>
-            </div>
-
-            <!-- Nombre y Firma -->
-            <div class="text-center md:text-right">
-                <p class="text-3xl md:text-4xl font-serif italic text-white font-light tracking-wide">
-                    Lic. Guadalupe
+            <!-- Servicio 2: Texto descriptivo -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
+                <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24">
+                  <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-base sm:text-lg font-black text-blue-900 tracking-tight">2. ADELANTO DE CITA</h3>
+                <p class="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed mt-0.5">
+                  Te ayudo a gestionar una fecha de entrevista más cercana, cuando existe disponibilidad.
                 </p>
-                <p class="text-3xl md:text-4xl font-serif italic text-white font-light tracking-wide">
-                    Ávila Camacho
-                </p>
+              </div>
             </div>
 
+            <!-- Servicio 3: Transparente con efecto cristal -->
+            <div class="bg-white/20 backdrop-blur-sm border border-blue-900/20 rounded-2xl p-4 flex items-center gap-4">
+              <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+              </div>
+              <div class="pl-3 border-l-2 border-blue-900">
+                <h3 class="text-sm sm:text-base font-extrabold text-blue-900">Asesoría personalizada de principio a fin</h3>
+                <p class="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed mt-0.5">
+                  Te acompaño durante todo tu proceso, resuelvo tus dudas y estoy contigo en cada paso.
+                </p>
+              </div>
+            </div>
+
+            <!-- BOTÓN WHATSAPP -->
+            <div class="pt-2 flex justify-start">
+              <a href="https://wa.me/525621794717?text=Hola,%20me%20interesa%20recibir%20asesoría%20para%20mi%20visa" 
+                 target="_blank" 
+                 class="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-base py-2.5 px-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 32 32">
+                  <path d="M16 2a13 13 0 0 0-11.23 19.54L3 29l7.67-1.72A13 13 0 1 0 16 2zm0 23.6a10.53 10.53 0 0 1-5.38-1.48l-.39-.23-4 1 .91-3.92-.25-.4A10.57 10.57 0 1 1 16 25.6zm5.82-7.9c-.32-.16-1.89-.93-2.18-1-.3-.11-.51-.16-.73.16s-.84 1-.1 1.29c-.27.24-.54.27-.86.11a10.87 10.87 0 0 1-3.21-2 12 12 0 0 1-2.22-2.77c-.19-.32 0-.5.14-.65s.32-.37.48-.56c.16-.18.21-.32.32-.53a.58.58 0 0 0 0-.58c-.08-.16-.73-1.75-1-2.39-.26-.63-.53-.54-.73-.55h-.62a1.2 1.2 0 0 0-.87.41 3.65 3.65 0 0 0-1.14 2.71 6.36 6.36 0 0 0 1.33 3.37c1.62 2.22 3.82 4.08 6.55 5.16 2.73 1.08 2.73.72 3.27.67a2.79 2.79 0 0 0 1.84-1.29 2.27 2.27 0 0 0 .16-1.29c-.08-.15-.3-.23-.62-.39z"/>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+
+          </div>
+
         </div>
 
-        <!-- Mensaje de Cierre / Compromiso -->
-        <div class="max-w-3xl mx-auto text-center pt-8 flex items-start justify-center gap-3">
-            <i class="fa-regular fa-heart text-red-500 text-2xl mt-1 shrink-0"></i>
-            <p class="text-blue-100 text-base md:text-lg font-normal leading-relaxed">
-                Cada caso es único. Mi compromiso es brindarte una <span class="text-white font-bold">asesoría profesional, honesta y un acompañamiento cercano</span> durante todo tu proceso.
-            </p>
-        </div>
-    </section>
+        <!-- COLUMNA DERECHA: Fotos -->
+        <div class="lg:col-span-5 flex flex-col items-center lg:items-end justify-end space-y-3 pt-6 lg:pt-0 lg:translate-x-8 lg:translate-y-6">
+          
+          <!-- Foto 1 (Casa Blanca) -->
+          <div class="bg-white/90 p-2 rounded-lg shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300 w-40 sm:w-44 border border-white shrink-0">
+            <div class="overflow-hidden rounded aspect-[4/3]">
+              <img src="Imagenes/foto1.jpeg" alt="Lic. Guadalupe Ávila Camacho" class="w-full h-full object-cover">
+            </div>
+            <p class="text-center text-[10px] font-semibold text-slate-600 mt-1 font-serif-italic">Atención cercana</p>
+          </div>
 
-    <!-- Footer Legal Breve -->
-    <footer class="bg-gray-950 text-gray-500 py-6 px-4 text-center text-xs">
-        <div class="max-w-4xl mx-auto space-y-2">
-            <p class="text-gray-400">
-                Aviso Legal: Despacho independiente de asesoría y apoyo en trámites. No formamos parte ni representamos a la Embajada o Consulado de Estados Unidos ni al Gobierno de Canadá.
-            </p>
-            <p>&copy; 2026 Asesoría de Visas - Lic. Guadalupe Ávila Camacho. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+          <!-- Foto 2 (Puente de Brooklyn) -->
+          <div class="bg-white/90 p-2 rounded-lg shadow-lg transform -rotate-2 hover:rotate-0 transition-transform duration-300 w-40 sm:w-44 border border-white shrink-0">
+            <div class="overflow-hidden rounded aspect-[3/4]">
+              <img src="Imagenes/foto2.jpeg" alt="Lic. Guadalupe Ávila Camacho en Nueva York" class="w-full h-full object-cover">
+            </div>
+            <p class="text-center text-[10px] font-semibold text-slate-600 mt-1 font-serif-italic">Resultados garantizados</p>
+          </div>
 
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/5215621794717?text=Hola%20Lic.%20Guadalupe%2C%20me%20gustar%C3%ADa%20solicitar%20asesor%C3%ADa" 
-       target="_blank" 
-       class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl z-50 transition transform hover:scale-110">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-blue-900 text-white py-5 border-t-4 border-[#D32F2F]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Teléfono de contacto -->
+      <a href="https://wa.me/525621794717" target="_blank" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+        <div class="w-10 h-10 bg-[#D32F2F] rounded-full flex items-center justify-center shadow-md">
+          <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="block text-[10px] uppercase tracking-wider text-slate-300 font-semibold">ASESORÍA DIRECTA</span>
+          <span class="text-lg font-bold">+52 56 21 79 47 17</span>
+        </div>
+      </a>
+
+      <!-- Nombre / Firma profesional -->
+      <div class="text-center md:text-right">
+        <p class="text-xl font-serif-italic">Lic. Guadalupe Ávila Camacho</p>
+        <p class="text-[11px] text-slate-300 font-medium">Especialista en Trámites Consulares</p>
+      </div>
+
+    </div>
+  </footer>
 
 </body>
 </html>
