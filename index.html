@@ -248,20 +248,18 @@ style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%,
 </footer>
 
 <script>
-const apiKey = "AIzaSyCWCqwBI0HOYJt5lTTayEHHmwEgZL3_BqA";  
-const placeId = "ChIJYxNVHdDB0YURzZ2Mb0bG0IY";  // Place ID de Avisas Consulting
-
 let reviews = [];
 let currentIndex = 0;
 
 async function loadReviews() {
-  const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`;
+  try {
+    const response = await fetch("https://avisas.com.mx/reviews");
+    reviews = await response.json();
 
-  const response = await fetch(url);
-  const data = await response.json();
-
-  reviews = data.result.reviews || [];
-  renderReviews();
+    renderReviews();
+  } catch (error) {
+    console.error("Error cargando reseñas:", error);
+  }
 }
 
 function renderReviews() {
