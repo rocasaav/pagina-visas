@@ -196,109 +196,56 @@ style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%,
 
 <!-- FOOTER -->
 <footer class="bg-blue-900 text-white py-5 border-t-4 border-[#D32F2F]">
-<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
 
-<!-- Teléfono -->
-<a href="https://wa.me/525621794717" target="_blank" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
-    <div class="flex items-center justify-center">
-        <!-- Ícono de teléfono minimalista -->
+    <!-- Teléfono -->
+    <a href="https://wa.me/525621794717" target="_blank" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+      <div class="flex items-center justify-center">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M2 5.5C2 4.12 3.12 3 4.5 3h2c.83 0 1.58.5 1.89 1.26l1.1 2.57c.27.63.17 1.36-.26 1.88l-1.2 1.45c1.48 2.63 3.82 4.97 6.45 6.45l1.45-1.2c.52-.43 1.25-.53 1.88-.26l2.57 1.1c.76.31 1.26 1.06 1.26 1.89v2c0 1.38-1.12 2.5-2.5 2.5C9.61 23 2 15.39 2 5.5z"/>
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2 5.5C2 4.12 3.12 3 4.5 3h2c.83 0 1.58.5 1.89 1.26l1.1 2.57c.27.63.17 1.36-.26 1.88l-1.2 1.45c1.48 2.63 3.82 4.97 6.45 6.45l1.45-1.2c.52-.43 1.25-.53 1.88-.26l2.57 1.1c.76.31 1.26 1.06 1.26 1.89v2c0 1.38-1.12 2.5-2.5 2.5C9.61 23 2 15.39 2 5.5z"/>
         </svg>
-    </div>
+      </div>
 
-    <div>
+      <div>
         <span class="block text-[10px] uppercase tracking-wider text-slate-300 font-semibold">ASESORÍA PERSONALIZADA</span>
         <span class="text-lg font-bold">+52 56 21 79 47 17</span>
-    </div>
-</a>
+      </div>
+    </a>
 
+    <!-- Correo -->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gavilac@avisas.com.mx" 
+       target="_blank" 
+       class="flex items-center gap-3 hover:opacity-90 transition-opacity">
 
-<!-- Correo -->
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=gavilac@avisas.com.mx" 
-   target="_blank" 
-   class="flex items-center gap-3 hover:opacity-90 transition-opacity">
-
-    <div class="flex items-center justify-center">
-        <!-- Ícono de correo minimalista -->
+      <div class="flex items-center justify-center">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M22 6l-10 7L2 6"/>
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M22 6l-10 7L2 6"/>
         </svg>
-    </div>
+      </div>
 
-    <div>
+      <div>
         <span class="block text-[10px] uppercase tracking-wider text-slate-300 font-semibold">
-            CORREO ELECTRÓNICO
+          CORREO ELECTRÓNICO
         </span>
         <span class="text-lg font-bold">gavilac@avisas.com.mx</span>
+      </div>
+    </a>
+
+    <!-- Firma -->
+    <div class="text-center md:text-right">
+      <p class="text-xl font-serif-italic">Lic. Guadalupe Ávila Camacho</p>
+      <p class="text-[11px] text-slate-300 font-medium">Consultora especializada en visa americana</p>
     </div>
-</a>
 
-<!-- Firma -->
-<div class="text-center md:text-right">
-    <p class="text-xl font-serif-italic">Lic. Guadalupe Ávila Camacho</p>
-    <p class="text-[11px] text-slate-300 font-medium">Consultora especializada en visa americana</p>
-</div>
-
-</div>
+  </div>
 </footer>
 
-<script>
-let reviews = [];
-let currentIndex = 0;
-
-async function loadReviews() {
-  try {
-    const response = await fetch("https://avisas.com.mx/reviews");
-    reviews = await response.json();
-
-    renderReviews();
-  } catch (error) {
-    console.error("Error cargando reseñas:", error);
-  }
-}
-
-function renderReviews() {
-  const container = document.getElementById("reviews-container");
-  container.innerHTML = "";
-
-  const visibleReviews = reviews.slice(currentIndex, currentIndex + 3);
-
-  visibleReviews.forEach(r => {
-    const card = `
-      <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-md">
-        <div class="flex items-center gap-2 mb-2">
-          <span class="text-yellow-500 text-lg">★</span>
-          <span class="font-bold text-slate-700">${r.rating}</span>
-        </div>
-        <p class="text-slate-800 font-semibold mb-3">"${r.text}"</p>
-        <p class="text-sm text-slate-500">${r.author_name}</p>
-      </div>
-    `;
-    container.innerHTML += card;
-  });
-}
-
-document.getElementById("nextBtn").addEventListener("click", () => {
-  if (currentIndex + 3 < reviews.length) {
-    currentIndex += 3;
-    renderReviews();
-  }
-});
-
-document.getElementById("prevBtn").addEventListener("click", () => {
-  if (currentIndex - 3 >= 0) {
-    currentIndex -= 3;
-    renderReviews();
-  }
-});
-
-loadReviews();
-</script>
+<!-- SCRIPT EXTERNO (Cloudflare Pages sí lo permite) -->
+<script src="js/reviews.js"></script>
 
 </body>
 </html>
