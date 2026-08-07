@@ -32,7 +32,6 @@ body {
 }
 </style>
 
-
 </head>
 
 <body class="bg-slate-900 text-slate-800 antialiased min-h-screen">
@@ -172,25 +171,15 @@ style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%,
 
 </section>
 
-<!-- RESEÑAS DE GOOGLE -->
+<!-- RESEÑAS DE GOOGLE (ELFSIGHT) -->
 <section class="bg-white py-12">
   <div class="max-w-7xl mx-auto px-6 md:px-12">
     <h2 class="text-3xl font-black text-blue-900 mb-6">Opiniones de Nuestros Clientes</h2>
 
-    <!-- Contenedor donde se insertan las reseñas -->
-    <div id="reviews-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <!-- Las reseñas se insertan aquí automáticamente -->
-    </div>
+    <!-- Widget de Elfsight -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-294f3d4c-e181-40de-a1ae-4907446b059f" data-elfsight-app-lazy></div>
 
-    <!-- Navegación -->
-    <div class="flex justify-center items-center gap-4 mt-8">
-      <button id="prevBtn" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">
-        ← Anterior
-      </button>
-      <button id="nextBtn" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">
-        Siguiente →
-      </button>
-    </div>
   </div>
 </section>
 
@@ -243,9 +232,6 @@ style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%,
 
   </div>
 </footer>
-
-<!-- SCRIPT EXTERNO (Cloudflare Pages sí lo permite) -->
-<script src="js/reviews.js"></script>
 
 </body>
 </html>
