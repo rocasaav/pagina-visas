@@ -172,6 +172,28 @@ style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%,
 
 </section>
 
+<!-- RESEÑAS DE GOOGLE -->
+<section class="bg-white py-12">
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <h2 class="text-3xl font-black text-blue-900 mb-6">Opiniones de Nuestros Clientes</h2>
+
+    <!-- Contenedor donde se insertan las reseñas -->
+    <div id="reviews-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Las reseñas se insertan aquí automáticamente -->
+    </div>
+
+    <!-- Navegación -->
+    <div class="flex justify-center items-center gap-4 mt-8">
+      <button id="prevBtn" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">
+        ← Anterior
+      </button>
+      <button id="nextBtn" class="bg-blue-900 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-800">
+        Siguiente →
+      </button>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer class="bg-blue-900 text-white py-5 border-t-4 border-[#D32F2F]">
 <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -224,6 +246,61 @@ style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%,
 
 </div>
 </footer>
+
+<script>
+const apiKey = "AIzaSyCWCqwBI0HOYJt5lTTayEHHmwEgZL3_BqA";  
+const placeId = "ChIJYxNVHdDB0YURzZ2Mb0bG0IY";  // Place ID de Avisas Consulting
+
+let reviews = [];
+let currentIndex = 0;
+
+async function loadReviews() {
+  const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`;
+
+  const response = await fetch(url);
+  const data = await response.json();
+
+  reviews = data.result.reviews || [];
+  renderReviews();
+}
+
+function renderReviews() {
+  const container = document.getElementById("reviews-container");
+  container.innerHTML = "";
+
+  const visibleReviews = reviews.slice(currentIndex, currentIndex + 3);
+
+  visibleReviews.forEach(r => {
+    const card = `
+      <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-md">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-yellow-500 text-lg">★</span>
+          <span class="font-bold text-slate-700">${r.rating}</span>
+        </div>
+        <p class="text-slate-800 font-semibold mb-3">"${r.text}"</p>
+        <p class="text-sm text-slate-500">${r.author_name}</p>
+      </div>
+    `;
+    container.innerHTML += card;
+  });
+}
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  if (currentIndex + 3 < reviews.length) {
+    currentIndex += 3;
+    renderReviews();
+  }
+});
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  if (currentIndex - 3 >= 0) {
+    currentIndex -= 3;
+    renderReviews();
+  }
+});
+
+loadReviews();
+</script>
 
 </body>
 </html>
