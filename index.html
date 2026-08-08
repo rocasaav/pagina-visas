@@ -2,236 +2,366 @@
 <html lang="es">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestoría de Visas Americanas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestoría de Visas Americanas - Avisas Consulting</title>
 
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
 
-<style>
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-.font-serif-italic {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-}
-</style>
+  <!-- Swiper CSS (para el carrusel de reseñas) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<style>
-@media (max-width: 640px) {
-    .hero-fondo {
-        background-position: 85% center !important;
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
     }
-}
-</style>
 
+    .font-serif-italic {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+    }
+
+    /* Personalización de botones del carrusel Swiper */
+    .swiper-button-next, .swiper-button-prev {
+      color: #1e3a8a !important; /* Azul Tailwind (blue-900) */
+    }
+    .swiper-pagination-bullet-active {
+      background-color: #D32F2F !important; /* Rojo */
+    }
+  </style>
+
+  <style>
+    @media (max-width: 640px) {
+      .hero-fondo {
+        background-position: 85% center !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-slate-900 text-slate-800 antialiased min-h-screen">
 
-<!-- HERO -->
-<section class="relative w-full bg-cover bg-right md:bg-right bg-no-repeat min-h-[85vh] md:min-h-screen flex items-center py-8 overflow-hidden"
-style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 40%, rgba(255, 255, 255, 0) 70%), url('Imagenes/Fondo3.PNG');">
+  <!-- HERO -->
+  <section class="relative w-full bg-cover bg-right md:bg-right bg-no-repeat min-h-[85vh] md:min-h-screen flex items-center py-8 overflow-hidden"
+    style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 40%, rgba(255, 255, 255, 0) 70%), url('Imagenes/Fondo3.PNG');">
 
-<div class="max-w-7xl mx-auto px-6 md:px-12 w-full">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 w-full">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
 
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="md:col-span-7 space-y-5">
+          <h1 class="uppercase leading-none tracking-tight">
+            <span class="block text-4xl sm:text-5xl md:text-6xl font-black text-blue-900">GESTORÍA</span>
+            <span class="block text-5xl sm:text-6xl md:text-7xl font-black text-[#D32F2F] my-1 drop-shadow-sm">DE VISAS</span>
+            <span class="block text-4xl sm:text-5xl md:text-6xl font-black text-blue-900">Americanas</span>
+          </h1>
 
-<!-- COLUMNA IZQUIERDA -->
-<div class="md:col-span-7 space-y-5">
+          <div class="flex items-center gap-2 my-2 text-xl">
+            <span class="text-[#0A2540]">★</span>
+            <span class="text-white">★</span>
+            <span class="text-[#D32F2F]">★</span>
+          </div>
 
-<h1 class="uppercase leading-none tracking-tight">
-    <span class="block text-4xl sm:text-5xl md:text-6xl font-black text-blue-900">GESTORÍA</span>
-    <span class="block text-5xl sm:text-6xl md:text-7xl font-black text-[#D32F2F] my-1 drop-shadow-sm">DE VISAS</span>
-    <span class="block text-4xl sm:text-5xl md:text-6xl font-black text-blue-900">Americanas</span>
-</h1>
+          <p class="text-base sm:text-lg text-slate-800 font-semibold leading-relaxed max-w-xl">
+            Te acompaño desde el inicio del trámite hasta que tengas
+            <span class="text-blue-900 font-extrabold">tu visa en tus manos.</span>
+          </p>
 
-<div class="flex items-center gap-2 my-2 text-xl">
-    <span class="text-[#0A2540]">★</span>
-    <span class="text-white">★</span>
-    <span class="text-[#D32F2F]">★</span>
-</div>
+          <!-- SERVICIOS -->
+          <div class="bg-transparent p-6 space-y-5 max-w-2xl">
 
-<p class="text-base sm:text-lg text-slate-800 font-semibold leading-relaxed max-w-xl">
-    Te acompaño desde el inicio del trámite hasta que tengas
-    <span class="text-blue-900 font-extrabold">tu visa en tus manos.</span>
-</p>
+            <!-- Encabezado -->
+            <div class="inline-flex items-center bg-blue-900 text-white rounded-full pr-5 pl-1.5 py-1 shadow-md gap-3">
+              <div class="w-8 h-8 rounded-full border-2 border-white/30 flex items-center justify-center bg-blue-900 shrink-0">
+                <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                </svg>
+              </div>
+              <span class="font-extrabold tracking-wider uppercase text-sm sm:text-base">NUESTROS SERVICIOS</span>
+            </div>
 
-<!-- SERVICIOS -->
-<div class="bg-transparent p-6 space-y-5 max-w-2xl">
+            <!-- Servicio 1 -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
+                <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24">
+                  <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                </svg>
+              </div>
 
-    <!-- Encabezado -->
-    <div class="inline-flex items-center bg-blue-900 text-white rounded-full pr-5 pl-1.5 py-1 shadow-md gap-3">
-        <div class="w-8 h-8 rounded-full border-2 border-white/30 flex items-center justify-center bg-blue-900 shrink-0">
-            <svg class="w-4 h-4 text-white fill-current" viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-            </svg>
+              <div>
+                <h3 class="text-base sm:text-lg font-black text-blue-900 tracking-tight">1. SOLICITUD DE VISA</h3>
+                <ul class="text-xs sm:text-sm text-slate-800 font-semibold space-y-1 mt-1 list-disc list-inside">
+                  <li>Formulario DS-160</li>
+                  <li>Programación de citas</li>
+                  <li>Simulacro de entrevista</li>
+                  <li>Preparación de documentos</li>
+                </ul>
+              </div>
+            </div>
+
+            <hr class="border-slate-300/60 border-dashed">
+
+            <!-- Servicio 2 -->
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
+                <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24">
+                  <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="text-base sm:text-lg font-black text-blue-900 tracking-tight">2. ADELANTO DE CITA</h3>
+                <p class="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed mt-0.5">
+                  Te ayudo a gestionar una fecha de entrevista más cercana, cuando existe disponibilidad.
+                </p>
+              </div>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="bg-white/20 backdrop-blur-sm border border-blue-900/20 rounded-2xl p-4 flex items-center gap-4">
+              <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
+                <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+              </div>
+
+              <div class="pl-3 border-l-2 border-blue-900">
+                <h3 class="text-sm sm:text-base font-extrabold text-blue-900">Asesoría personalizada de principio a fin</h3>
+                <p class="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed mt-0.5">
+                  Te acompaño durante todo tu proceso, resuelvo tus dudas y estoy contigo en cada paso.
+                </p>
+              </div>
+            </div>
+
+            <!-- BOTÓN WHATSAPP -->
+            <div class="pt-2 flex justify-start">
+              <a href="https://wa.me/525621794717?text=Hola,%20me%20interesa%20recibir%20asesoría%20para%20mi%20visa"
+                target="_blank"
+                class="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-base py-2.5 px-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 32 32">
+                  <path d="M16 2a13 13 0 0 0-11.23 19.54L3 29l7.67-1.72A13 13 0 1 0 16 2zm0 23.6a10.53 10.53 0 0 1-5.38-1.48l-.39-.23-4 1 .91-3.92-.25-.4A10.57 10.57 0 1 1 16 25.6zm5.82-7.9c-.32-.16-1.89-.93-2.18-1-.3-.11-.51-.16-.73.16s-.84 1-.1 1.29c-.27.24-.54.27-.86.11a10.87 10.87 0 0 1-3.21-2 12 12 0 0 1-2.22-2.77c-.19-.32 0-.5.14-.65s.32-.37.48-.56c.16-.18.21-.32.32-.53a.58.58 0 0 0 0-.58c-.08-.16-.73-1.75-1-2.39-.26-.63-.53-.54-.73-.55h-.62a1.2 1.2 0 0 0-.87.41 3.65 3.65 0 0 0-1.14 2.71 6.36 6.36 0 0 0 1.33 3.37c1.62 2.22 3.82 4.08 6.55 5.16 2.73 1.08 2.73.72 3.27.67a2.79 2.79 0 0 0 1.84-1.29 2.27 2.27 0 0 0 .16-1.29c-.08-.15-.3-.23-.62-.39z"/>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+
+          </div>
         </div>
-        <span class="font-extrabold tracking-wider uppercase text-sm sm:text-base">NUESTROS SERVICIOS</span>
+
+        <!-- COLUMNA DERECHA: FOTOS -->
+        <div class="md:col-span-2 flex flex-row md:flex-col items-center md:items-end justify-end gap-4 pt-6 md:pt-0 md:translate-x-4 md:translate-y-4">
+
+          <!-- Foto 1 -->
+          <div class="bg-white/90 p-2 rounded-lg shadow-lg transform md:rotate-3 hover:rotate-0 transition-transform duration-300 w-36 sm:w-40 border border-white shrink-0">
+            <div class="overflow-hidden rounded aspect-[4/3]">
+              <img src="Imagenes/foto1.jpeg" alt="Lic. Guadalupe Ávila Camacho" class="w-full h-full object-cover">
+            </div>
+            <p class="text-center text-[10px] font-semibold text-slate-600 mt-1 font-serif-italic">Atención cercana</p>
+          </div>
+
+          <!-- Foto 2 -->
+          <div class="bg-white/90 p-2 rounded-lg shadow-lg transform md:-rotate-2 hover:rotate-0 transition-transform duration-300 w-36 sm:w-40 border border-white shrink-0">
+            <div class="overflow-hidden rounded aspect-[3/4]">
+              <img src="Imagenes/foto2.jpeg" alt="Lic. Guadalupe Ávila Camacho en Nueva York" class="w-full h-full object-cover">
+            </div>
+            <p class="text-center text-[10px] font-semibold text-slate-600 mt-1 font-serif-italic">Historial de éxito 100%</p>
+          </div>
+
+        </div>
+
+      </div>
     </div>
 
-    <!-- Servicio 1 -->
-    <div class="flex items-start gap-4">
-        <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
-            <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24">
-                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-            </svg>
+  </section>
+
+  <!-- RESEÑAS DE GOOGLE (CARRUSEL NATIVO CON GOOGLE PLACES API) -->
+  <section class="bg-slate-50 py-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+      
+      <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+        <div>
+          <h2 class="text-3xl font-black text-blue-900">Opiniones de Nuestros Clientes</h2>
+          <p class="text-slate-600 text-sm mt-1">Reseñas reales verificadas directamente desde Google Maps</p>
+        </div>
+        
+        <!-- Badge Resumen de Google -->
+        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow-sm border border-slate-200 self-start md:self-auto">
+          <svg class="w-6 h-6" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span id="google-rating" class="font-extrabold text-slate-800 text-lg">5.0</span>
+          <div id="google-stars" class="text-amber-400 text-sm">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- Contenedor del Carrusel (Swiper) -->
+      <div class="swiper myGoogleReviews relative px-2 py-4">
+        <div class="swiper-wrapper" id="reviews-container">
+          <!-- Estado de carga preliminar -->
+          <div class="swiper-slide p-6 bg-white rounded-2xl shadow-sm border border-slate-200">
+            <p class="text-slate-500 text-sm animate-pulse">Cargando reseñas de Google...</p>
+          </div>
+        </div>
+
+        <!-- Navegación de Swiper -->
+        <div class="swiper-pagination !-bottom-2"></div>
+        <div class="swiper-button-next hidden sm:flex"></div>
+        <div class="swiper-button-prev hidden sm:flex"></div>
+      </div>
+
+      <!-- Elemento oculto para inicializar el PlacesService de Google -->
+      <div id="google-map-dummy" class="hidden"></div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-blue-900 text-white py-5 border-t-4 border-[#D32F2F]">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+
+      <!-- Teléfono -->
+      <a href="https://wa.me/525621794717" target="_blank" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+        <div class="flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M2 5.5C2 4.12 3.12 3 4.5 3h2c.83 0 1.58.5 1.89 1.26l1.1 2.57c.27.63.17 1.36-.26 1.88l-1.2 1.45c1.48 2.63 3.82 4.97 6.45 6.45l1.45-1.2c.52-.43 1.25-.53 1.88-.26l2.57 1.1c.76.31 1.26 1.06 1.26 1.89v2c0 1.38-1.12 2.5-2.5 2.5C9.61 23 2 15.39 2 5.5z"/>
+          </svg>
         </div>
 
         <div>
-            <h3 class="text-base sm:text-lg font-black text-blue-900 tracking-tight">1. SOLICITUD DE VISA</h3>
-            <ul class="text-xs sm:text-sm text-slate-800 font-semibold space-y-1 mt-1 list-disc list-inside">
-                <li>Formulario DS-160</li>
-                <li>Programación de citas</li>
-                <li>Simulacro de entrevista</li>
-                <li>Preparación de documentos</li>
-            </ul>
+          <span class="block text-[10px] uppercase tracking-wider text-slate-300 font-semibold">ASESORÍA PERSONALIZADA</span>
+          <span class="text-lg font-bold">+52 56 21 79 47 17</span>
         </div>
-    </div>
+      </a>
 
-    <hr class="border-slate-300/60 border-dashed">
+      <!-- Correo -->
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gavilac@avisas.com.mx" 
+         target="_blank" 
+         class="flex items-center gap-3 hover:opacity-90 transition-opacity">
 
-    <!-- Servicio 2 -->
-    <div class="flex items-start gap-4">
-        <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
-            <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24">
-                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
-            </svg>
+        <div class="flex items-center justify-center">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M22 6l-10 7L2 6"/>
+          </svg>
         </div>
 
         <div>
-            <h3 class="text-base sm:text-lg font-black text-blue-900 tracking-tight">2. ADELANTO DE CITA</h3>
-            <p class="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed mt-0.5">
-                Te ayudo a gestionar una fecha de entrevista más cercana, cuando existe disponibilidad.
-            </p>
+          <span class="block text-[10px] uppercase tracking-wider text-slate-300 font-semibold">
+            CORREO ELECTRÓNICO
+          </span>
+          <span class="text-lg font-bold">gavilac@avisas.com.mx</span>
         </div>
-    </div>
+      </a>
 
-    <!-- Servicio 3 -->
-    <div class="bg-white/20 backdrop-blur-sm border border-blue-900/20 rounded-2xl p-4 flex items-center gap-4">
-        <div class="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center shrink-0 shadow-md">
-            <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-            </svg>
-        </div>
-
-        <div class="pl-3 border-l-2 border-blue-900">
-            <h3 class="text-sm sm:text-base font-extrabold text-blue-900">Asesoría personalizada de principio a fin</h3>
-            <p class="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed mt-0.5">
-                Te acompaño durante todo tu proceso, resuelvo tus dudas y estoy contigo en cada paso.
-            </p>
-        </div>
-    </div>
-
-    <!-- BOTÓN WHATSAPP -->
-    <div class="pt-2 flex justify-start">
-        <a href="https://wa.me/525621794717?text=Hola,%20me%20interesa%20recibir%20asesoría%20para%20mi%20visa"
-        target="_blank"
-        class="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-base py-2.5 px-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-200">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 32 32">
-                <path d="M16 2a13 13 0 0 0-11.23 19.54L3 29l7.67-1.72A13 13 0 1 0 16 2zm0 23.6a10.53 10.53 0 0 1-5.38-1.48l-.39-.23-4 1 .91-3.92-.25-.4A10.57 10.57 0 1 1 16 25.6zm5.82-7.9c-.32-.16-1.89-.93-2.18-1-.3-.11-.51-.16-.73.16s-.84 1-.1 1.29c-.27.24-.54.27-.86.11a10.87 10.87 0 0 1-3.21-2 12 12 0 0 1-2.22-2.77c-.19-.32 0-.5.14-.65s.32-.37.48-.56c.16-.18.21-.32.32-.53a.58.58 0 0 0 0-.58c-.08-.16-.73-1.75-1-2.39-.26-.63-.53-.54-.73-.55h-.62a1.2 1.2 0 0 0-.87.41 3.65 3.65 0 0 0-1.14 2.71 6.36 6.36 0 0 0 1.33 3.37c1.62 2.22 3.82 4.08 6.55 5.16 2.73 1.08 2.73.72 3.27.67a2.79 2.79 0 0 0 1.84-1.29 2.27 2.27 0 0 0 .16-1.29c-.08-.15-.3-.23-.62-.39z"/>
-            </svg>
-            <span>WhatsApp</span>
-        </a>
-    </div>
-
-</div>
-</div>
-
-<!-- COLUMNA DERECHA: FOTOS -->
-<div class="md:col-span-2 flex flex-row md:flex-col items-center md:items-end justify-end gap-4 pt-6 md:pt-0 md:translate-x-4 md:translate-y-4">
-
-    <!-- Foto 1 -->
-    <div class="bg-white/90 p-2 rounded-lg shadow-lg transform md:rotate-3 hover:rotate-0 transition-transform duration-300 w-36 sm:w-40 border border-white shrink-0">
-        <div class="overflow-hidden rounded aspect-[4/3]">
-            <img src="Imagenes/foto1.jpeg" alt="Lic. Guadalupe Ávila Camacho" class="w-full h-full object-cover">
-        </div>
-        <p class="text-center text-[10px] font-semibold text-slate-600 mt-1 font-serif-italic">Atención cercana</p>
-    </div>
-
-    <!-- Foto 2 -->
-    <div class="bg-white/90 p-2 rounded-lg shadow-lg transform md:-rotate-2 hover:rotate-0 transition-transform duration-300 w-36 sm:w-40 border border-white shrink-0">
-        <div class="overflow-hidden rounded aspect-[3/4]">
-            <img src="Imagenes/foto2.jpeg" alt="Lic. Guadalupe Ávila Camacho en Nueva York" class="w-full h-full object-cover">
-        </div>
-        <p class="text-center text-[10px] font-semibold text-slate-600 mt-1 font-serif-italic">Historial de éxito 100%</p>
-    </div>
-
-</div>
-
-</div>
-</div>
-
-</section>
-
-<!-- RESEÑAS DE GOOGLE (ELFSIGHT) -->
-<section class="bg-white py-12">
-  <div class="max-w-7xl mx-auto px-6 md:px-12">
-    <h2 class="text-3xl font-black text-blue-900 mb-6">Opiniones de Nuestros Clientes</h2>
-
-    <!-- Widget de Elfsight -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-294f3d4c-e181-40de-a1ae-4907446b059f" data-elfsight-app-lazy></div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-blue-900 text-white py-5 border-t-4 border-[#D32F2F]">
-  <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
-
-    <!-- Teléfono -->
-    <a href="https://wa.me/525621794717" target="_blank" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
-      <div class="flex items-center justify-center">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M2 5.5C2 4.12 3.12 3 4.5 3h2c.83 0 1.58.5 1.89 1.26l1.1 2.57c.27.63.17 1.36-.26 1.88l-1.2 1.45c1.48 2.63 3.82 4.97 6.45 6.45l1.45-1.2c.52-.43 1.25-.53 1.88-.26l2.57 1.1c.76.31 1.26 1.06 1.26 1.89v2c0 1.38-1.12 2.5-2.5 2.5C9.61 23 2 15.39 2 5.5z"/>
-        </svg>
+      <!-- Firma -->
+      <div class="text-center md:text-right">
+        <p class="text-xl font-serif-italic">Lic. Guadalupe Ávila Camacho</p>
+        <p class="text-[11px] text-slate-300 font-medium">Consultora especializada en visa americana</p>
       </div>
 
-      <div>
-        <span class="block text-[10px] uppercase tracking-wider text-slate-300 font-semibold">ASESORÍA PERSONALIZADA</span>
-        <span class="text-lg font-bold">+52 56 21 79 47 17</span>
-      </div>
-    </a>
-
-    <!-- Correo -->
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gavilac@avisas.com.mx" 
-       target="_blank" 
-       class="flex items-center gap-3 hover:opacity-90 transition-opacity">
-
-      <div class="flex items-center justify-center">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <path stroke-linecap="round" stroke-linejoin="round"
-                d="M22 6l-10 7L2 6"/>
-        </svg>
-      </div>
-
-      <div>
-        <span class="block text-[10px] uppercase tracking-wider text-slate-300 font-semibold">
-          CORREO ELECTRÓNICO
-        </span>
-        <span class="text-lg font-bold">gavilac@avisas.com.mx</span>
-      </div>
-    </a>
-
-    <!-- Firma -->
-    <div class="text-center md:text-right">
-      <p class="text-xl font-serif-italic">Lic. Guadalupe Ávila Camacho</p>
-      <p class="text-[11px] text-slate-300 font-medium">Consultora especializada en visa americana</p>
     </div>
+  </footer>
 
-  </div>
-</footer>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Script de Carga de Reseñas mediante Google Places API -->
+  <script>
+    // CONFIGURACIÓN:
+    // Reemplaza "TU_GOOGLE_API_KEY" con la API Key configurada en Google Cloud Console.
+    const GOOGLE_API_KEY = "AIzaSyA3CD39hsPFEgAb4tmS8CUzLdijnNSgNaU"; 
+    
+    // Identificador único de Avisas Consulting en Google Maps
+    const PLACE_ID = "ChIJYxNFvdwBzoURzdlsSG9tsIY" ; // Inserte aquí el Place ID del negocio (ej. ChIJ...)
+
+    function initGoogleReviews() {
+      const mapElement = document.getElementById('google-map-dummy');
+      const service = new google.maps.places.PlacesService(mapElement);
+
+      service.getDetails({
+        placeId: PLACE_ID,
+        fields: ['name', 'rating', 'reviews', 'user_ratings_total']
+      }, (place, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK && place.reviews) {
+          
+          // Actualizar rating general
+          if (place.rating) {
+            document.getElementById('google-rating').innerText = place.rating.toFixed(1);
+          }
+
+          // Generar tarjetas de reseñas
+          const container = document.getElementById('reviews-container');
+          container.innerHTML = place.reviews.map(review => {
+            const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+            return `
+              <div class="swiper-slide">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between h-full min-h-[220px]">
+                  <div>
+                    <div class="flex items-center gap-3 mb-3">
+                      <img src="${review.profile_photo_url}" alt="${review.author_name}" class="w-10 h-10 rounded-full object-cover border border-slate-100" />
+                      <div>
+                        <h4 class="font-bold text-slate-800 text-sm leading-tight">${review.author_name}</h4>
+                        <span class="text-xs text-slate-400">${review.relative_time_description}</span>
+                      </div>
+                    </div>
+                    <div class="text-amber-400 text-sm mb-2">${stars}</div>
+                    <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-4">
+                      "${review.text}"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('');
+
+          // Inicializar Carrusel Swiper
+          new Swiper('.myGoogleReviews', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+              delay: 4000,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 }
+            }
+          });
+
+        } else {
+          document.getElementById('reviews-container').innerHTML = `
+            <div class="p-6 bg-white rounded-2xl border border-slate-200 text-slate-500 text-sm">
+              No se pudieron obtener las reseñas en este momento.
+            </div>
+          `;
+        }
+      });
+    }
+  </script>
+
+  <!-- Carga del SDK de Google Maps Javascript -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=TU_GOOGLE_API_KEY&libraries=places&callback=initGoogleReviews" async defer></script>
 
 </body>
 </html>
